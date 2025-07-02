@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dragon Ball</title>
+  </head>
+  <body>
+    <section class="nav">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <img
+            class="logo-image"
+            src="./assets/images/Dragon-Ball-Logo.png"
+            alt="Dragon Ball"
+          />
+        </div>
+        <ul class="ul-default-none nav-list">
+          <li data-open="collection" class="nav-btn characters active">
+            Characters
+          </li>
+          <li data-open="fav" class="nav-btn favorites">Favorite Characters</li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="char-container">
+      <div class="search-nav">
+        <div class="search-container">
+          <label for="search">
+            <input
+              autocomplete="off"
+              id="search"
+              type="text"
+              class="search-input"
+              placeholder="Search Name..."
+            />
+            <i class="fas fa-search"></i>
+          </label>
+        </div>
+        <nav>
+          <ul class="ul-default-none affiliation">
+            <li class="z-fighter">Z Fighters:</li>
+            <li class="'frieza">Army Of Frieza:</li>
+            <li class="freelancer">Freelancers:</li>
+          </ul>
+          <div class="sort-btn-container">
+            <button id="asc" class="sort-btn">Sort By Name ⬆️</button>
+            <button id="desc" class="sort-btn">Sort By Name ⬇️</button>
+          </div>
+        </nav>
+      </div>
+      <div id="collection" class="cards-container char-cards active"></div>
+      <div id="fav" class="cards-container fav-cards"></div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

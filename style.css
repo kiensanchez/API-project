@@ -1,0 +1,199 @@
+body {
+  background-color: gray;
+}
+
+.nav {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+}
+
+.nav-container,
+.affiliation {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.logo-container {
+  width: 500px;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-list li {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.nav-list li:hover {
+  cursor: pointer;
+}
+
+.characters.active,
+.favorites.active {
+  color: orange;
+}
+
+.char-container {
+  margin-top: 115px;
+}
+
+.search-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-container {
+  margin: 0.5rem auto;
+}
+
+label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  border: none;
+}
+
+.search-container .fa-search {
+  position: absolute;
+  right: 10px;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 5px orange, 1px 1px 5px orange;
+}
+
+.affiliation {
+  justify-content: center;
+}
+
+.affiliation li {
+  margin-right: 3rem;
+  color: orange;
+  font-weight: 700;
+  cursor: default;
+}
+
+.char-cards,
+.fav-cards {
+  display: none;
+}
+
+.char-cards.active,
+.fav-cards.active {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  height: 600px;
+  width: 300px;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.avatar {
+  width: 100%;
+  object-fit: contain;
+  height: 70%;
+  margin: 1rem auto;
+}
+
+.card-info {
+  padding-left: 2rem;
+  background-color: rgba(128, 128, 128, 0.175);
+}
+
+.detail {
+  cursor: default;
+}
+
+.card-info span {
+  color: orange;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.add-btn {
+  display: block;
+  margin: 0.5rem auto;
+  width: 150px;
+  height: 30px;
+  border-radius: 2rem;
+  background: rgb(252, 58, 58);
+}
+
+.sort-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn,
+.sort-btn {
+  border: none;
+  transition: ease;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.add-btn:hover {
+  color: white;
+}
+
+.sort-btn {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.sort-btn:hover {
+  background-color: orange;
+}
+
+@media (max-width: 950px) {
+  .nav-list li {
+    font-size: 1rem;
+  }
+
+  .nav-list li:hover,
+  .add-btn:hover,
+  .sort-btn:hover,
+  .search-input {
+    cursor: default;
+  }
+
+  .affiliation li {
+    font-weight: 500;
+    margin-right: 1.5rem;
+  }
+}
